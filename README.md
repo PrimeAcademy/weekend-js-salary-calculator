@@ -29,7 +29,7 @@ Once the employee is deleted, also update the total spend on salaries to discoun
 Good Luck, have a great weekend!
 
 
-#Grading Guidelines
+#Challenge Grading Guidelines
 ##Reinforcement Needed
 1 - Individual was missing many logic components to show that the group was on the path to completion. Code is generally unorganized and difficult to follow. 
 
