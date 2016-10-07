@@ -27,3 +27,14 @@ Create a delete button that removes an employee from the DOM. Note that in hard 
 Once the employee is deleted, also update the total spend on salaries to discount the removed employee's salary. This will require that the logic knows which element was removed. You will need to stretch yourself for this one. I also recommend that you look into jQuery's .data() function to help complete this. Note, you will need to do something both when the employee is added and when they are deleted to make your application 'smart'.
 
 Good Luck, have a great weekend!
+
+
+#Grading Guidelines
+##Reinforcement Needed
+1 - Individual was missing many logic components to show that the group was on the path to completion. Code is generally unorganized and difficult to follow. 
+
+##Meets Expectations
+2 - Individual was able to successfully complete the challenge based on the requirements of the project. Code is generally well organized. Variable and Function names are descriptive of what their purpose is.
+
+##Above Expectations
+3 - Same as 2, but also includes: Abstraction is used in such a way that the application is modular where appropriate. Styling is used to complete the user experience in such a way that is visually appealing. Hard and Pro mode complete.
