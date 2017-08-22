@@ -3,7 +3,7 @@ Create an application that records employee salaries and adds salaries up to rep
 
 ## Topics Covered
 - JavaScript
-- jQuery
+- jQuery - Selectors, append, and event handling
 
 ## Assignment
 
