@@ -1,40 +1,37 @@
-#Weekend Challenge 1: Salary Calculator
+# Weekend Challenge 1: Salary Calculator
+Create an application that records employee salaries and adds salaries up to report monthly costs. 
 
-For your weekend challenge, you will need to create an application that records employees along with their salary. We also want to add the salaries up so we know how much we’re spending each month.
+## Topics Covered
+- JavaScript
+- jQuery
 
-The application should first have an input form that collects the following:
+## Assignment
 
-- Employee First Name
+The application should have an input form that collects _employee first name, last name, ID number, job title, annual salary_.
 
-- Employee Last Name
+A 'Submit' button should collect the form information, store the information to calculate monthly costs, append information to the DOM and clear the input fields. Using the stored information, calculate monthly costs and append this to the to DOM.
 
-- ID Number
+### Files Provided
+No files have been provided. Following what you learned in class create files needed, init a git repository locally, and push them to a repository you created on GitHub.
 
-- Job Title
+## Hard Mode
+Create a delete button that removes an employee from the DOM. For Hard mode, it does not need to remove that Employee's salary from the reported total.
 
-- Annual Salary
+## Pro Mode
+Once the employee is deleted, update the total spend on salaries account for this employee's removal. This will require that the logic knows which element was removed. Look into jQuery's .data() function. You will need to do something both when the employee is added and when they are deleted.
 
+### Modes (OPTIONAL)
 
+Above, we introduced the concept of levels of difficulty. "Mode" is how we will typically refer to each level. Below is a brief explanation of
 
-A 'Submit' button should clear out the inputs and your logic should store that information. Then, that information should be appended to the DOM so the user of the application can see the information they just entered.
+* what to expect when attempting each mode
+* if they are required or not
 
-Finally, your logic should calculate all of the employee salaries and report back the Monthly cost of salaries.
+Mode | Description
+--- | ---
+Base | required
+Hard | optional, stretches your understanding
+Pro | optional, stretches your understanding and may require additional research
 
-##Hard Mode
-Create a delete button that removes an employee from the DOM. Note that in hard mode, it need not remove that Employee's salary from the reported total.
-
-##Pro Mode
-Once the employee is deleted, also update the total spend on salaries to discount the removed employee's salary. This will require that the logic knows which element was removed. You will need to stretch yourself for this one. I also recommend that you look into jQuery's .data() function to help complete this. Note, you will need to do something both when the employee is added and when they are deleted to make your application 'smart'.
-
-Good Luck, have a great weekend!
-
-
-#Challenge Grading Guidelines
-##Reinforcement Needed
-1 - Individual was missing many logic components to show that the group was on the path to completion. Code is generally unorganized and difficult to follow. 
-
-##Meets Expectations
-2 - Individual was able to successfully complete the challenge based on the requirements of the project. Code is generally well organized. Variable and Function names are descriptive of what their purpose is.
-
-##Above Expectations
-3 - Same as 2, but also includes: Abstraction is used in such a way that the application is modular where appropriate. Styling is used to complete the user experience in such a way that is visually appealing. Hard and Pro mode complete.
+## Assignment Submission
+Check in your repo, then turn in your work via the Prime Academy Assignment Application at [http://primeacademy.io](http://primeacademy.io), as usual and don't hesitate to hit up the Slack channel as needed!
