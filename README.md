@@ -17,6 +17,8 @@ No files have been provided. Following what you learned in class create files ne
 ## Hard Mode
 Create a delete button that removes an employee from the DOM. For Hard mode, it does not need to remove that Employee's salary from the reported total.
 
+Add styling to the page.
+
 ## Pro Mode
 Once the employee is deleted, update the total spend on salaries account for this employee's removal. This will require that the logic knows which element was removed. Look into jQuery's .data() function. You will need to do something both when the employee is added and when they are deleted.
 
