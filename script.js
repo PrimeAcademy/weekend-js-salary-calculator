@@ -62,7 +62,7 @@ function averageMath(){
   return monthlySalary;
 }
 function monthlyCostAdd(){
-  var monthlyCostVar = "<div id=\"TotalCost\"><p>" + monthlySalary + "</p></div>";
+  var monthlyCostVar = "<div id=\"TotalCost\"><p id=\"costCSS\">" + monthlySalary + "</p></div>";
   $('#TotalCost').html(monthlyCostVar);
 }
 function formReset(){
