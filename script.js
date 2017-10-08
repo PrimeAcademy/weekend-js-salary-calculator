@@ -11,6 +11,7 @@ function readyNow() {
   $('#submitFN').on('click', totalcostMath);
   $('#submitFN').on('click', averageMath);
   $('#submitFN').on('click', monthlyCostAdd);
+  $('#submitFN').on('click', formReset);
 }
 var employee = [];
 var clickCount = 0;
@@ -55,7 +56,7 @@ function totalcostMath(){
   totalAverageSalary = (totalAverageSalary + parseInt(employee[4])) / clickCount;
   return totalAverageSalary;
 }
-var monthlySalary =0;
+var monthlySalary=0;
 function averageMath(){
   monthlySalary = Math.round(totalAverageSalary / 12);
   return monthlySalary;
@@ -63,4 +64,11 @@ function averageMath(){
 function monthlyCostAdd(){
   var monthlyCostVar = "<div id=\"TotalCost\"><p>" + monthlySalary + "</p></div>";
   $('#TotalCost').html(monthlyCostVar);
+}
+function formReset(){
+  $('#firstName').val("");
+  $('#lastName').val("");
+  $('#ID').val("");
+  $('#JobTitle').val("");
+  $('#AnnualSalary').val("");
 }
