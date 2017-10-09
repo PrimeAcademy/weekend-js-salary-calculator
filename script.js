@@ -12,13 +12,14 @@ function readyNow() {
   $('#submitFN').on('click', averageMath);
   $('#submitFN').on('click', monthlyCostAdd);
   $('#submitFN').on('click', formReset);
+  $('#submitEmployeeSearch').on('click', removeTableEmployee);
 }
 var employee = [];
 var clickCount = 0;
 
 function firstName(){
-  employee.length=0;
-  clickCount++;
+  employee.length=0; //employeeVar
+  clickCount++; //click counter to calculate monthly cost
   var $firstName = $('#firstName').val();
   console.log($firstName);
   employee.push($firstName);
@@ -71,4 +72,14 @@ function formReset(){
   $('#ID').val("");
   $('#JobTitle').val("");
   $('#AnnualSalary').val("");
+}
+
+function removeTableEmployee(){
+var allListElements = $('#table tr');
+if ($("#removeEmployee").find() == $("td").val()) {
+  console.log('yes');
+  }
+  else {
+    alert("That name is not in the directory.");
+  }
 }
