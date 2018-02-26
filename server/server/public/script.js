@@ -77,4 +77,7 @@ function formReset() {
 }
 function deleteFunction() {
   $(this).remove();
+  monthlySalary = 0;
+  var monthlyCostVar = "<div id=\"TotalCost\"><p id=\"costCSS\">" + monthlySalary + "</p></div>";
+  $('#TotalCost').html(monthlyCostVar)
 }
