@@ -22,8 +22,6 @@ No files have been provided. Fork and clone this repository or create a new GitH
 
 ## Stretch Mode
 
-Create an `Employee` class to store the information about each new employee in an Array.
-
 Add styling or extra functionality that fits with the theme of this assignment.
 
 Once the employee is deleted, update the total spend on salaries account for this employee's removal. This will require that the logic knows which element was removed. You will need to use `.text()` as a getter or look into jQuery's `.data()` function. This is tricky! 
