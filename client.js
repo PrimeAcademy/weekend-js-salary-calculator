@@ -1,42 +1,29 @@
-$(document).ready(readyNow);
-
-function readyNow () {
-appendEmployees();
+$(document).ready(appendEmployees);
 
 
-function addFirstName () {
-    
+function appendAllInputs () {
+
     let firstName = $('#firstName').val();
     console.log(firstName);
-} // end firstName function 
 
-function addLastName () {
     let lastName = $('#lastName').val();
         console.log(lastName);
-} // end lastName function 
 
-function addId () {
     let employeeId = $('#idNumber').val();
         console.log(employeeId);
-}  // end addId
-function addTitle () {
+
     let title = $('#employeeTitle').val();
         console.log(title);
-} // end addTitle
-function addSalary () {
+
     let salary = $('#annualSalary').val();
         console.log(salary);
-}
 
-// append employee properties on click
+} // end appendAllInputs 
+
+// append employee properties on submit button click 
 function appendEmployees () {
-    $('#submitButton').on('click', addFirstName);
-    $('#submitButton').on('click', addLastName)
-    $('#submitButton').on('click', addId)
-    $('#submitButton').on('click', addTitle )
-    $('#submitButton').on('click', addSalary)
+    $('#submitButton').on('click', appendAllInputs);
 } // end appendEmployees
-} // end readyNow
 
 
 
