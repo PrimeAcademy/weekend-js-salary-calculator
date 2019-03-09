@@ -2,23 +2,15 @@ $(document).ready(appendEmployees);
 
 
 function appendAllInputs () {
-
-    let firstName = $('#firstName').val();
-    console.log(firstName);
-
-    let lastName = $('#lastName').val();
-        console.log(lastName);
-
-    let employeeId = $('#idNumber').val();
-        console.log(employeeId);
-
-    let title = $('#employeeTitle').val();
-        console.log(title);
-
-    let salary = $('#annualSalary').val();
-        console.log(salary);
-
-} // end appendAllInputs 
+    let newEmployee = {
+         first: firstName = $('#firstName').val(),
+         last: lastName = $('#lastName').val(),
+         id: employeeId = $('#idNumber').val(),
+         title: title = $('#employeeTitle').val(),
+         salary: salary = $('#annualSalary').val()
+    } // end newEmployee
+    console.log('new employee', newEmployee);
+} // end appendAllInputs
 
 // append employee properties on submit button click 
 function appendEmployees () {
