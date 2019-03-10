@@ -1,6 +1,10 @@
 $(document).ready(appendEmployees);
 
+// global variables 
+let newEmployeeArray = [];
 
+
+// on click of submit button, appendAllInputs function will add a new employee with these inputs
 function appendAllInputs () {
     let newEmployee = {
          first: firstName = $('#firstName').val(),
@@ -9,7 +13,10 @@ function appendAllInputs () {
          title: title = $('#employeeTitle').val(),
          salary: salary = $('#annualSalary').val()
     } // end newEmployee
-    console.log('new employee', newEmployee);
+    console.log('Added Employee: ', newEmployee);
+    newEmployeeArray.push(newEmployee);
+    console.log('newEmployee array push', newEmployeeArray);
+    
 } // end appendAllInputs
 
 // append employee properties on submit button click 
@@ -20,3 +27,10 @@ function appendEmployees () {
 
 
 
+
+
+
+
+
+
+// put new objects into an array 
