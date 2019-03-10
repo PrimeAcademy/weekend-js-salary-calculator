@@ -2,7 +2,7 @@ h1 {
     text-align: center;
 }
 
-.newEmployeeGrid div {
+#newEmployeeGrid div ul {
 display: inline-block;
 margin: 5px;
 }

@@ -32,14 +32,14 @@ function appendAllInputs () {
 function displayNewEmployee  () {
 console.log(`in displayNewEployee function`, );
 
-let el = $('.newEmployeeGrid');
+let el = $('#ul');
 el.empty();
 
     // loop through the newEmployeeArray
     for(let employee of newEmployeeArray) {
     // for each employee, create a new <div> in <div class id = "newEmployeeGrid"
-    el.append(`<div>${employee.first} </div>`, `<div>${employee.last} </div>`, 
-    `<div>${employee.id} </div>`, `<div>${employee.title} </div>`,`<div>${employee.salary} </div>`);
+    el.append(`<li> <div id = "css">${employee.first} ${employee.last}
+    ${employee.id} ${employee.title} ${employee.salary} </div> </li>`);
 
     } // end for of loop  
     
