@@ -32,7 +32,9 @@ el.empty();
     // loop through the newEmployeeArray
     for(let employee of newEmployeeArray) {
     // for each employee, create a new <div> in <div class id = "newEmployeeGrid"
-    el.append(`<div>JUNO VUE JUNO VUE JUNO VUE </div>`);
+    // CSS color grid, make inline text? 
+    el.append(`<div>${employee.first} </div>`, `<div>${employee.last} </div>`, 
+    `<div>${employee.id} </div>`, `<div>${employee.title} </div>`,`<div>${employee.salary} </div>`);
 
     } // end for of loop  
     
