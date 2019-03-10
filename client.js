@@ -38,9 +38,15 @@ el.empty();
     // loop through the newEmployeeArray
     for(let employee of newEmployeeArray) {
     // for each employee, create a new <div> in <div class id = "newEmployeeGrid"
-    el.append(`<li> <div id = "css">${employee.first} ${employee.last}
-    ${employee.id} ${employee.title} ${employee.salary} </div> </li>`);
-
+    // NOTE appended li id = "employeeCss"
+    el.append(`<div id = "employeeCss">  
+                <div class = "gridItem"> ${employee.first} </div>
+                <div class = "gridItem"> ${employee.last} </div>
+                <div class = "gridItem"> ${employee.id} </div>
+                <div class = "gridItem"> ${employee.title} </div>
+                <div class = "gridItem"> ${employee.salary} </div>
+                </div class>`);
+    
     } // end for of loop  
     
 

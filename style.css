@@ -2,7 +2,8 @@ h1 {
     text-align: center;
 }
 
-#newEmployeeGrid div ul {
-display: inline-block;
-margin: 5px;
+.newEmployeeGrid div {
+  display: inline; 
+  border: 1px solid black;       /* NOTE WHY IS THE BORDER SHOWING ON THE DOM BEFORE CLICK? */ 
+  background-color: lightgrey;; 
 }
