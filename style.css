@@ -1,3 +1,8 @@
 h1 {
     text-align: center;
 }
+
+.newEmployeeGrid div {
+display: inline-block;
+margin: 5px;
+}

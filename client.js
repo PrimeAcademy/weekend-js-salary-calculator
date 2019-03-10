@@ -16,6 +16,12 @@ function appendAllInputs () {
     console.log('Added Employee: ', newEmployee);
     // put new objects into an array 
     newEmployeeArray.push(newEmployee);
+    // empty user inputs after submit 
+    $('#firstName').val('');
+    $('#lastName').val('');
+    $('#idNumber').val('');
+    $('#employeeTitle').val('');
+    $('#annualSalary').val('');
     console.log('newEmployee array push', newEmployeeArray);
 
     // check if displayNewEmployee function works
@@ -32,7 +38,6 @@ el.empty();
     // loop through the newEmployeeArray
     for(let employee of newEmployeeArray) {
     // for each employee, create a new <div> in <div class id = "newEmployeeGrid"
-    // CSS color grid, make inline text? 
     el.append(`<div>${employee.first} </div>`, `<div>${employee.last} </div>`, 
     `<div>${employee.id} </div>`, `<div>${employee.title} </div>`,`<div>${employee.salary} </div>`);
 
@@ -47,3 +52,4 @@ function appendEmployees () {
 } // end appendEmployees
 
 
+    
