@@ -14,10 +14,30 @@ function appendAllInputs () {
          salary: salary = $('#annualSalary').val()
     } // end newEmployee
     console.log('Added Employee: ', newEmployee);
+    // put new objects into an array 
     newEmployeeArray.push(newEmployee);
     console.log('newEmployee array push', newEmployeeArray);
-    
+
+    // check if displayNewEmployee function works
+    displayNewEmployee();
 } // end appendAllInputs
+
+    // display new employee created onto the DOM
+function displayNewEmployee  () {
+console.log(`in displayNewEployee function`, );
+
+let el = $('.newEmployeeGrid');
+el.empty();
+
+    // loop through the newEmployeeArray
+    for(let employee of newEmployeeArray) {
+    // for each employee, create a new <div> in <div class id = "newEmployeeGrid"
+    el.append(`<div>JUNO VUE JUNO VUE JUNO VUE </div>`);
+
+    } // end for of loop  
+    
+
+} // end displayNewEmployee
 
 // append employee properties on submit button click 
 function appendEmployees () {
@@ -25,12 +45,3 @@ function appendEmployees () {
 } // end appendEmployees
 
 
-
-
-
-
-
-
-
-
-// put new objects into an array 
