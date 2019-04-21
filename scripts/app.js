@@ -3,7 +3,6 @@ const employees = [];
 $(document).ready(onReady);
 
 function onReady() {
-    console.log('document is ready');
     const $employeesCntr = $('.js-employeesCntr');
     const $newEmployeeForm = $('.js-newEmployeeForm');
 
@@ -15,10 +14,8 @@ function onReady() {
  * @param {object} event
  */
 function onSubmitNewEmployee(event) {
-    console.log(event);
     event.preventDefault();
     const $form = $(this);
-    console.log('$form', $form);
     const inputDataList = $form.serializeArray();
     const newEmployee = {};
 
@@ -27,8 +24,26 @@ function onSubmitNewEmployee(event) {
         newEmployee[indvInputData.name] = indvInputData.value;
     }
     employees.push(newEmployee);
+    render();
 
     $form.trigger('reset');
-    console.log('newEmployee', newEmployee);
-    console.log('employees', employees);
+}
+
+/**
+ * Update the view based on the current employees list data and the total monthly salary for all employees.
+ */
+function render() {
+    const $employeesCntr = $('.js-employeesCntr');
+    $employeesCntr.empty();
+    for (let i = 0; i < employees.length; i++) {
+        const indvEmployee = employees[i];
+        $employeesCntr.append('<div></div>');
+        const $employeeElem = $employeesCntr.children().last();
+        $employeeElem.append(`<p>${indvEmployee.firstName}</p>`)
+            .append(`<p>${indvEmployee.lastName}</p>`)
+            .append(`<p>${indvEmployee.id}</p>`)
+            .append(`<p>${indvEmployee.title}</p>`)
+            .append(`<p>${indvEmployee.annualSalary}</p>`)
+            .append(`<button type="button" class="js-deleteBtn btn">Delete</button>`);
+    }
 }
