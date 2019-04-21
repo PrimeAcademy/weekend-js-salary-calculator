@@ -60,12 +60,12 @@ function render() {
             .append(`<p>${indvEmployee.lastName}</p>`)
             .append(`<p>${indvEmployee.id}</p>`)
             .append(`<p>${indvEmployee.title}</p>`)
-            .append(`<p>${indvEmployee.annualSalary}</p>`)
+            .append(`<p>${formatSalaryAsMoney(indvEmployee.annualSalary)}</p>`)
             .append(`<button type="button" class="js-deleteBtn btn" data-id="${i}">Delete</button>`);
     }
 
     const totalMonthly = calculateMonthlySalary(employees);
-    $('.js-totalMonthlySalary').text(totalMonthly);
+    $('.js-totalMonthlySalary').text(formatSalaryAsMoney(totalMonthly));
 }
 
 /**
@@ -74,14 +74,35 @@ function render() {
  * @returns {number}
  */
 function calculateMonthlySalary(allEmpoyees) {
-    let totalMonthlySalary = 0;
+    let totalSalary = 0;
 
     for (let indvEmployee of allEmpoyees) {
-        const salaryNum = parseInt(indvEmployee.annualSalary);
-        const monthlySalary = salaryNum / 12;
-        totalMonthlySalary += monthlySalary;
+        let salaryNum = parseInt(indvEmployee.annualSalary);
+
+        if (indvEmployee.annualSalary.indexOf('.') !== -1) {
+            salaryNum = parseFloat(indvEmployee.annualSalary);
+        }
+
+        totalSalary += salaryNum;
     }
+    let totalMonthlySalary = totalSalary / 12;
     const roundToNearestChange = Math.round( totalMonthlySalary * 100 ) / 100;
 
     return roundToNearestChange;
+}
+
+/**
+ * Format a number string of the salary to a string readable as a money value.
+ * @param {string} salary
+ */
+function formatSalaryAsMoney(salary) {
+    const currencyFormatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        minimumFractionDigits: 2,
+    });
+    let salaryAsNumber = salary * 1;
+    const salaryAsMoney = currencyFormatter.format(salaryAsNumber);
+
+    return salaryAsMoney;
 }
