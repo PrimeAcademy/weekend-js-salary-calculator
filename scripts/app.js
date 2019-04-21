@@ -42,7 +42,6 @@ function onClickDeleteEmployee() {
     deleteId = parseInt(deleteId);
 
     employees.splice(deleteId, 1);
-    console.log('employees', employees);
     render();
 }
 
@@ -64,4 +63,25 @@ function render() {
             .append(`<p>${indvEmployee.annualSalary}</p>`)
             .append(`<button type="button" class="js-deleteBtn btn" data-id="${i}">Delete</button>`);
     }
+
+    const totalMonthly = calculateMonthlySalary(employees);
+    $('.js-totalMonthlySalary').text(totalMonthly);
+}
+
+/**
+ * Calaculate the total monthly salary for allEmployees.
+ * @param {array} allEmpoyees
+ * @returns {number}
+ */
+function calculateMonthlySalary(allEmpoyees) {
+    let totalMonthlySalary = 0;
+
+    for (let indvEmployee of allEmpoyees) {
+        const salaryNum = parseInt(indvEmployee.annualSalary);
+        const monthlySalary = salaryNum / 12;
+        totalMonthlySalary += monthlySalary;
+    }
+    const roundToNearestChange = Math.round( totalMonthlySalary * 100 ) / 100;
+
+    return roundToNearestChange;
 }
