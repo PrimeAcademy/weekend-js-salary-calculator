@@ -7,6 +7,7 @@ function onReady() {
     const $newEmployeeForm = $('.js-newEmployeeForm');
 
     $newEmployeeForm.on('submit', onSubmitNewEmployee);
+    $employeesCntr.on('click', '.js-deleteBtn', onClickDeleteEmployee);
 }
 
 /**
@@ -29,8 +30,25 @@ function onSubmitNewEmployee(event) {
     $form.trigger('reset');
 }
 
+// -------------------------------------------------------------------------------------------------
+
 /**
- * Update the view based on the current employees list data and the total monthly salary for all employees.
+ * On the click on the delete button for an individual employee remove that employee from the
+ * employees list and re-render the view.
+ */
+function onClickDeleteEmployee() {
+    const $delectBtn = $(this);
+    let deleteId = $delectBtn.data('id');
+    deleteId = parseInt(deleteId);
+
+    employees.splice(deleteId, 1);
+    console.log('employees', employees);
+    render();
+}
+
+/**
+ * Update the view based on the current employees list data and the total monthly salary for all
+ * employees.
  */
 function render() {
     const $employeesCntr = $('.js-employeesCntr');
@@ -44,6 +62,6 @@ function render() {
             .append(`<p>${indvEmployee.id}</p>`)
             .append(`<p>${indvEmployee.title}</p>`)
             .append(`<p>${indvEmployee.annualSalary}</p>`)
-            .append(`<button type="button" class="js-deleteBtn btn">Delete</button>`);
+            .append(`<button type="button" class="js-deleteBtn btn" data-id="${i}">Delete</button>`);
     }
 }
