@@ -1,3 +1,32 @@
 .gridTable {
-    display: flex;
+    display: grid;
+    grid-template-rows: 75px auto 75px;
+    grid-template-columns: auto auto 75px auto auto 100px;
+    grid-template-areas:
+      "header header header header header header"
+      "flex flex fixed flex flex fixed"
+      "footer footer footer footer footer footer";
+    justify-items: stretch;
+    align-items: stretch;
+    justify-content: stretch;
+}
+
+.gridTable-cell {
+    padding: 15px;
+}
+
+.gridTable-cell_header {
+    grid-area: header;
+}
+
+.gridTable-cell_footer {
+    grid-area: footer;
+}
+
+.gridTable-cell_flex {
+    grid-area: flex;
+}
+
+.gridTable-cell_fixed {
+    grid-area: fixed;
 }

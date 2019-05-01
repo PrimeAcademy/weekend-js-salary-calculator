@@ -94,6 +94,7 @@ function calculateMonthlySalary(allEmpoyees) {
 /**
  * Format a number string of the salary to a string readable as a money value.
  * @param {string} salary
+ * @returns {string}
  */
 function formatSalaryAsMoney(salary) {
     const currencyFormatter = new Intl.NumberFormat('en-US', {
