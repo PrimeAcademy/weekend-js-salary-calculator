@@ -6,4 +6,4 @@
 
 Your project description goes here. What problem did you solve? How did you solve it?
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/curriculum-syllabus-master/week-20-presentations-deployment/github-finalization-assignment.md).
+Additional README details can be found [here](https://github.com/PrimeAcademy/github-finalization-assignment).
