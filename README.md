@@ -8,17 +8,17 @@ Your project description goes here. What problem did you solve? How did you solv
 
 Additional README details can be found [here](https://github.com/PrimeAcademy/github-finalization-assignment).
 
-- add heading
-- add inputs
-- add submit button
-- link style.css into HTML
-- make table in HTML
-    - input displays (each column)
-    - delete button
-- Add total monthly to HTML
-- source jQuery into HTML (console log)
-- source javascript into HTML (console log)
-- document ready test
+- [X] add heading
+- [X] add inputs
+- [X] add submit button
+- [X] link style.css into HTML
+- [X] make table in HTML
+    - [X] input displays (each column)
+    - [X] delete button
+- [X] Add total monthly to HTML
+- [X] source jQuery into HTML (console log)
+- [X] source javascript into HTML (console log)
+- [X] document ready test
 - add event listener for submit button
     - write handle submit
     - get inputs from input boxes (console log)

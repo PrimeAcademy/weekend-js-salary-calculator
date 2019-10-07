@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Employee Salary Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.js"></script>
+    <script src="client.js"></script>
+</head>
+<body>
+    <h1>Employee Salary Calculator</h1>
+    <input type="text" placeholder="First Name" id="firstName"/>
+    <input type="text" placeholder="Last Name" id="lastName"/>
+    <input type="number" placeholder="ID" id="employeeId"/>
+    <input type="text" placeholder="Title" id="title"/>
+    <input type="number" placeholder="Annual Salary" id="annualSalary"/>
+    <button id="addEmployee">Submit</button>
+
+    <div id="outputArea">
+        <h3>Employees</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Employee ID</th>
+                    <th>Title</th>
+                    <th>Salary</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Kris</td>
+                    <td>Szafranski</td>
+                    <td>1</td>
+                    <td>Director of Instruction</td>
+                    <td>12</td>
+                    <td>
+                        <button class="deleteButton">
+                            Delete
+                        </button>
+                    </td>
+                </tr>  
+                <tr>
+                    <td>Luke</td>
+                    <td>Schlangen</td>
+                    <td>4</td>
+                    <td>Instructor</td>
+                    <td>12</td>
+                    <td>
+                        <button class="deleteButton">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mary</td>
+                    <td>Mosman</td>
+                    <td>7</td>
+                    <td>Instructor</td>
+                    <td>12</td>
+                    <td>
+                        <button class="deleteButton">
+                            Delete
+                        </button>
+                    </td>
+                </tr>          
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        Total Monthly: $<span>3</span>
+    </div>
+</body>
+</html>
