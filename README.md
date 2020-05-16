@@ -1,9 +1,11 @@
 # Project Name
+# Nagle Tier2 Weeken Challenge
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+For this week, we are presented with the oportunity to create a 
+salary calculator. This application will take in the salary info
+from a number of employees, adds it up and shows the total for 
+each annual salary into a monthly expense.
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
-
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+I first started with a function that takes in all the employee information.
