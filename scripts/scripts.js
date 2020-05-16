@@ -31,7 +31,7 @@ function addEmployee(event){
     console.log('The employees array is:', employees);
 
     //append to DOM must be called before clearing values
-    appendToDOM(employee);
+    appendToDOM(employees);
 
     //once the array has been pushed we can clear the values in the table
     $('#firstName').val('');
@@ -44,20 +44,23 @@ function addEmployee(event){
 //once all the employee information can be gathered from the DOM
 //we can then display the info to a table in the DOM
 
-function appendToDOM(object){
+function appendToDOM(arrayParam){
     console.log('In appendToDOM');
     $('#employeeTableOut').empty();
+
+    for (let i = 0 ; i < arrayParam.length; i++){
        
     const row = `<tr>
-    <td>${object.firstName}</td>
-    <td>${object.lastName}</td>
-    <td>${object.idNumber}</td>
-    <td>${object.position}</td>
-    <td>${object.annualSalary}</td>
-    <td><button class= "delete" id= "${object.idNumber}">Delete</button></td>
+    <td>${arrayParam[i].firstName}</td>
+    <td>${arrayParam[i].lastName}</td>
+    <td>${arrayParam[i].idNumber}</td>
+    <td>${arrayParam[i].position}</td>
+    <td>${arrayParam[i].annualSalary}</td>
+    <td><button class= "delete" id= "${arrayParam[i].idNumber}">Delete</button></td>
     </tr>`
     $('#employeeTableOut').append(row);
-
+    }
+    monthlySalary();
     deleteRow();
 }
 
@@ -76,3 +79,16 @@ function deleteRow(){
     }
 }
 }
+
+function monthlySalary(){
+    console.log('In monthlySalary');
+    let total = 0;
+    for (let i = 0; i < employees.length; i++){
+      total += employees[i].annualSalary/12;
+    }
+    total = total
+    console.log(total);
+    $('#monthlyTotal').empty();
+    $('#monthlyTotal').append(total);
+  
+  }
