@@ -35,6 +35,4 @@ function addEmployee(event){
     $('#idNumber').val('');
     $('#position').val('');
     $('#annualSalary').val('');
-
-
 }
