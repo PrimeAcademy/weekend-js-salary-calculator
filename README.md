@@ -9,3 +9,4 @@ each annual salary into a monthly expense.
 ## Description
 
 I first started with a function that takes in all the employee information.
+Concentrated on making sure all my information from index.html wi

@@ -1,0 +1,29 @@
+#header{
+    background-color: aquamarine;
+    padding: 30px;
+    text-align: center;
+}
+
+#employeeForm{
+    padding: 5px;
+}
+
+#addEmployee{
+    text-align: center;
+}
+
+#employeeList{
+    text-align: center;
+}
+
+#employeeTableOut{
+    padding: 10px;
+}
+
+#tableOut{
+    padding: 10px;
+}
+
+body{
+    background-color: lightsteelblue;
+}
