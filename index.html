@@ -2,94 +2,47 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <title>Document</title>
-    <script src="./script/jquery-3.4.1.min_copy 2.js"></script>
-    <script src="./script/client.js"></script>
 
     <link rel="stylesheet" href="./styles/bootstrap.min.css" />
     <link rel="stylesheet" href="./styles/style.css" />
+
+    <script src="./script/jquery-3.4.1.min_copy 2.js"></script>
+    <script src="./script/client.js"></script>
   </head>
   <body>
-    <form class="employeeForm">
-      <label>Add Employee</label>
-      <input id="firstNameInput" type="text" />
-      <input id="lastNameInput" type="text" />
-      <input id="empIdInput" type="number" />
-      <input id="jobTitle" type="text" />
-      <input id="annualSalary" type="text" />
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-2">Salary Calculator</h1>
+        <p class="">
+          Adds Employee Monthly Salaries and Reports Total in Red if above
+          $20,000
+        </p>
+      </div>
+    </div>
+    <form>
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="First name" />
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Last name" />
+        </div>
+        <div class="col">
+          <input type="number" class="form-control" placeholder="ID" />
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Title" />
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Annual Salary" />
+        </div>
+      </div>
     </form>
-    <table class="js-table">
-      <thead class="js-table-head">
-        <tr>
-          <th scope="col">First Name</th>
-          <th scope="col">Last Name</th>
-          <th scope="col">ID</th>
-          <th scope="col">Title</th>
-          <th scope="col">Annual Salary</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row"></th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row"></th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row"></th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <th scope="row"></th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <th scope="row"></th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <th scope="row"></th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-      <tfoot class="tableFooter">
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tfoot>
-    </table>
   </body>
 </html>
