@@ -56,10 +56,10 @@ function renderTable() {
   `);
 
   if (totalMonthlySalaries > 20000) {
-    $('#js-total-salaries').addClass('red background');
+    $('#js-total-salaries').addClass('redBackground');
     console.log('Over 20K');
   } else {
-    $('#js-total-salaries').removeClass('red background');
+    $('#js-total-salaries').removeClass('redBackground');
     console.log('Under 20K');
   }
 }
