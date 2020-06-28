@@ -14,12 +14,6 @@ body, html {
     padding: 20px;
 }
 
-/* .field-row {
-    margin-bottom: 20px;
-    /* border: solid 1px #000; */
-
-/* } */
-
 .table-margin {
     margin-top: 20px;
     width: 700px;
@@ -30,11 +24,6 @@ body, html {
     line-height: 10px;
     font-size: small;
 }
-
-/* .table-container {
-    width: 600px;
-    min-width: 75%;
-} */
 
 .panel {
     margin: 0 auto;
