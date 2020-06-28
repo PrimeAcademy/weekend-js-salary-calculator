@@ -25,106 +25,108 @@
         </p>
       </div>
     </div>
-    <div class="panel">
-      <div class="container">
-        <form id="js-form-employee-fields">
-          <div class="form-row">
-            <div class="form-group col-md-5">
-              <input
-                id="js-firstNField"
-                type="text"
-                class="form-control"
-                placeholder="First name"
-              />
+    <div class="container container-all">
+      <div class="panel">
+        <div class="container">
+          <form id="js-form-employee-fields">
+            <div class="form-row">
+              <div class="form-group col-md-5">
+                <input
+                  id="js-firstNField"
+                  type="text"
+                  class="form-control"
+                  placeholder="First name"
+                />
+              </div>
+              <div class="form-group col-md-5">
+                <input
+                  id="js-lastNField"
+                  type="text"
+                  class="form-control"
+                  placeholder="Last name"
+                />
+              </div>
+              <div class="form-group col-md-2">
+                <input
+                  id="js-IdField"
+                  type="number"
+                  class="form-control"
+                  placeholder="ID"
+                />
+              </div>
+              <div class="form-group col-md-4">
+                <select class="form-control" id="js-titleField">
+                  <option>Senior Developer</option>
+                  <option>CEO</option>
+                  <option>CTO</option>
+                  <option>CIO</option>
+                  <option>CFO</option>
+                  <option>Director of Technology</option>
+                  <option>Director of Human Resources</option>
+                  <option>Spiritual Advisor</option>
+                  <option>IT Manager</option>
+                  <option>Business Development Manager</option>
+                  <option>Junior Developer</option>
+                </select>
+              </div>
+              <div class="form-group col-md-3">
+                <input
+                  id="js-annualSalaryField"
+                  type="text"
+                  class="form-control"
+                  placeholder="Annual Salary"
+                />
+              </div>
             </div>
-            <div class="form-group col-md-5">
-              <input
-                id="js-lastNField"
-                type="text"
-                class="form-control"
-                placeholder="Last name"
-              />
-            </div>
-            <div class="form-group col-md-2">
-              <input
-                id="js-IdField"
-                type="number"
-                class="form-control"
-                placeholder="ID"
-              />
-            </div>
-            <div class="form-group col-md-4">
-              <select class="form-control" id="js-titleField">
-                <option>Senior Developer</option>
-                <option>CEO</option>
-                <option>CTO</option>
-                <option>CIO</option>
-                <option>CFO</option>
-                <option>Director of Technology</option>
-                <option>Director of Human Resources</option>
-                <option>Spiritual Advisor</option>
-                <option>IT Manager</option>
-                <option>Business Development Manager</option>
-                <option>Junior Developer</option>
-              </select>
-            </div>
-            <div class="form-group col-md-3">
-              <input
-                id="js-annualSalaryField"
-                type="text"
-                class="form-control"
-                placeholder="Annual Salary"
-              />
-            </div>
-          </div>
-          <button class="btn btn-secondary float-right css-btn" type="submit">
-            Submit Employee
-          </button>
-        </form>
+            <button class="btn btn-secondary float-right css-btn" type="submit">
+              Submit Employee
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="container">
-      <!-- <h3 id="js-total-salaries">Total Monthly Salaries: $0</h3> -->
-      <h3 id="h3-total-month">
-        Total Monthly Salaries: &nbsp;&nbsp
-        <span id="js-total-salaries">&nbsp;&nbsp --$0--</span>
-      </h3>
-    </div>
+      <div class="container">
+        <!-- <h3 id="js-total-salaries">Total Monthly Salaries: $0</h3> -->
+        <h3 id="h3-total-month">
+          Total Monthly Salaries: &nbsp;&nbsp
+          <span id="js-total-salaries">&nbsp;&nbsp --$0--</span>
+        </h3>
+      </div>
 
-    <div class="container table-container">
-      <table class="table table-striped table-margin">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">ID</th>
-            <th scope="col">Title</th>
-            <th scope="col">Annual Salary</th>
-            <th scope="col">Delete</th>
-          </tr>
-        </thead>
-        <tbody id="js-table-body">
-          <tr class="js-tr-style">
-            <td>No Data</td>
-            <td>No Data</td>
-            <td>No Data</td>
-            <td>No Data</td>
-            <td>No Data</td>
-            <td>No Data</td>
-          </tr>
-        </tbody>
-        <tfoot class="thead-dark">
-          <tr>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-          </tr>
-        </tfoot>
-      </table>
+      <div class="container table-container">
+        <table class="table table-striped table-margin">
+          <thead class="thead-dark table-head-css">
+            <tr>
+              <th scope="col" id="firstNameTHead">First Name</th>
+              <th scope="col" id="lastNameTHead">Last Name</th>
+              <th scope="col" id="titleTHead">Title</th>
+              <th scope="col" id="idTHead">ID</th>
+              <th scope="col" id="salTHead">Annual Salary</th>
+              <th scope="col" id="deleteBtnTHead">Delete</th>
+            </tr>
+          </thead>
+          <tbody id="js-table-body">
+            <tr class="js-tr-style">
+              <td>No Data</td>
+              <td>No Data</td>
+              <td>No Data</td>
+              <td>No Data</td>
+              <td>No Data</td>
+              <td>No Data</td>
+            </tr>
+          </tbody>
+          <tfoot class="thead-dark">
+            <tr>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
     </div>
   </body>
 </html>

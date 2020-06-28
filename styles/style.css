@@ -22,11 +22,13 @@ body, html {
 
 .table-margin {
     margin-top: 20px;
+    width: 700px;
 }
 
 .js-tr-style {
     text-indent: .5rem;
-    line-height: 8px;
+    line-height: 10px;
+    font-size: small;
 }
 
 /* .table-container {
@@ -53,4 +55,35 @@ body, html {
 
 #h3-total-month {
     margin-bottom: 20px;
+}
+
+.table-head-css {}
+
+#firstNameTHead {
+    width: 150px;
+}
+
+#lastNameTHead {
+    width: 150px;
+}
+
+#lastNameHTHead {
+    width: 50px;
+}
+
+#titleTHead {
+    width: 120px;
+}
+
+#salTHead {
+    width: 125px;
+}
+
+#deleteBtnTHead {
+    width: 40px;
+}
+
+.container-all {
+    align-items: center;
+    width: 700px;
 }
