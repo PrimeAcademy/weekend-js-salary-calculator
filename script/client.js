@@ -1,6 +1,7 @@
 $(document).ready(init);
 
 const employeeArray = [];
+let totalMonthlySalaries = 0;
 
 function init() {
   console.log('Initialized');
@@ -17,7 +18,7 @@ function addEmployee(event) {
     last: $('#js-lastNField').val(),
     id: $('#js-IdField').val(),
     title: $('#js-titleField').val(),
-    salary: $('#js-annualSalaryField').val(),
+    salary: parseInt($('#js-annualSalaryField').val()),
   };
 
   employeeArray.push(employeeObject);
@@ -31,7 +32,7 @@ function addEmployee(event) {
 function renderTable() {
   $('#js-table-body').empty();
   console.log('in renderTable');
-  let totalMonthlySalaries = 0;
+  //   let totalMonthlySalaries = 0;
   for (let employeeObject of employeeArray) {
     totalMonthlySalaries += employeeObject.salary;
     $('#js-table-body').append(`
