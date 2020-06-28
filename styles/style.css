@@ -63,7 +63,7 @@ body, html {
 }
 
 #titleTHead {
-    width: 120px;
+    width: 140px;
 }
 
 #salTHead {
@@ -76,5 +76,5 @@ body, html {
 
 .container-all {
     align-items: center;
-    width: 700px;
+    width: 750px;
 }
