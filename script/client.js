@@ -70,6 +70,7 @@ function deleteEmployee() {
     const indexedRecord = employeeArray[i];
     console.log('record indexes', indexedRecord);
     console.log(employeeArray);
+    $('#js-delete-btn').parent().parent().remove();
   }
 }
 
