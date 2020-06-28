@@ -20,15 +20,19 @@ body, html {
 
 /* } */
 
-*/ .table-margin {
+.table-margin {
     margin-top: 20px;
-    ;
 }
 
 .js-tr-style {
     text-indent: .5rem;
     line-height: 8px;
 }
+
+/* .table-container {
+    width: 600px;
+    min-width: 75%;
+} */
 
 .panel {
     margin: 0 auto;
