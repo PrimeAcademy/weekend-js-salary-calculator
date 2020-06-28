@@ -21,6 +21,7 @@ function addEmployee(event) {
   };
 
   employeeArray.push(employeeObject);
+  console.table(employeeArray);
 
   $('#js-form-employee-fields')[0].reset();
 
@@ -30,23 +31,25 @@ function addEmployee(event) {
 function renderTable() {
   $('#js-table-body').empty();
   console.log('in renderTable');
+  let totalMonthlySalaries = 0;
   for (let employeeObject of employeeArray) {
+    totalMonthlySalaries += employeeObject.salary;
     $('#js-table-body').append(`
-<tr>
-    <td>${employeeObject.first}</td>
-    <td>${employeeObject.last}</td>
-    <td>${employeeObject.id}</td>
-    <td>${employeeObject.title}</td>
-    <td>${employeeObject.salary}</td>
-    <td><button>Delete Employee</button></td>
-</tr>
-`);
+    <tr>
+        <td>${employeeObject.first}</td>
+        <td>${employeeObject.last}</td>
+        <td>${employeeObject.id}</td>
+        <td>${employeeObject.title}</td>
+        <td>${employeeObject.salary}</td>
+        <td><button>X</button></td>
+    </tr>
+    `);
   }
+  $('#js-total-salaries').text(`
+    Total Monthly Salaries:
+    ${totalMonthlySalaries}
+  `);
 }
-
-// Create an application that records employee salaries
-// and adds salaries up to report monthly costs.
-
 // Topics Covered
 // JavaScript
 // jQuery - Selectors, append, and event handling
