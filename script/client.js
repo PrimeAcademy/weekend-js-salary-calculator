@@ -67,22 +67,20 @@ function renderTable() {
 function deleteDomLine() {
   console.log('in deleteDomLine');
   $(this).parent().parent().remove();
+  deleteEmployeeRecord();
 }
 
 function deleteEmployeeRecord() {
   console.log('in deleteEmployee Record');
-  for (let i = 0; i < employeeArray.length; i++) {
-    const indexedRecord = employeeArray[i];
-    console.log('record indexes', indexedRecord);
-    console.log(employeeArray);
-    const dataData = $('#js-table-body', '.test').data(indexedRecord);
-    console.log(dataData);
-    $('#js-table-body', '.test').remove(this);
-    // $('#js-table-body').remove(this);
-
-    // $('#js-delete-btn').parent().parent().remove();
-  }
+  console.log(employeeArray);
+  const indexedRecord = $(this).data();
+  console.log('record indexes', indexedRecord);
+  employeeArray.splice(indexedRecord, 1);
+  console.log(employeeArray);
+  console.log('it worked!');
 }
+
+//   }
 
 ///
 function currencyConverter(number) {
