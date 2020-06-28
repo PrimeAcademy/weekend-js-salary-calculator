@@ -1,3 +1,7 @@
+body, html {
+    background-color: #f8f8ff;
+}
+
 .redBackground {
     background-color: #ff0000;
 }
@@ -28,7 +32,8 @@
 .panel {
     margin: 0 auto;
     padding: 20px;
-    max-width: 75%;
+    /* max-width: 75%; */
+    width: 700px;
     box-sizing: border-box;
     background-color: #f8f8ff;
     border-radius: 3px;
