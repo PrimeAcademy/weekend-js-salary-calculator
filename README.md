@@ -23,7 +23,7 @@ If the total monthly costs of all employees is greater than \$20,000 the total i
 
 ## Screen Shot
 
-<img src="./images/app_screenshot_1.png" alt="screenShot1">
+<img src="./images/app_screenshot_.png" alt="screenShot1">
 
 ### Prerequisites
 
