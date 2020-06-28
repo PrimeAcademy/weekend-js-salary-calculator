@@ -25,7 +25,7 @@ function addEmployee(event) {
   employeeArray.push(employeeObject);
   console.table(employeeArray);
 
-  //   $('#js-form-employee-fields')[0].reset();
+    $('#js-form-employee-fields')[0].reset();
 
   console.log('Employee Array', employeeArray);
 }
