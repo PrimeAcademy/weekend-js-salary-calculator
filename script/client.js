@@ -1,7 +1,6 @@
 $(document).ready(init);
 
 const employeeArray = [];
-let totalMonthlySalaries = 0;
 
 function init() {
   console.log('Initialized');
@@ -20,6 +19,7 @@ function addEmployee(event) {
     title: $('#js-titleField').val(),
     salary: parseInt($('#js-annualSalaryField').val()),
   };
+  console.log('employeeObject', employeeObject);
 
   employeeArray.push(employeeObject);
   console.table(employeeArray);
@@ -32,25 +32,41 @@ function addEmployee(event) {
 function renderTable() {
   $('#js-table-body').empty();
   console.log('in renderTable');
-  //   let totalMonthlySalaries = 0;
+  let totalMonthlySalaries = 0;
+
   for (let employeeObject of employeeArray) {
-    totalMonthlySalaries += employeeObject.salary / 12;
+    let currencyConvertedSalary = currencyConverter(employeeObject.salary);
+    totalMonthlySalaries += parseInt(employeeObject.salary / 12);
+
     $('#js-table-body').append(`
     <tr>
         <td>${employeeObject.first}</td>
         <td>${employeeObject.last}</td>
         <td>${employeeObject.id}</td>
         <td>${employeeObject.title}</td>
-        <td>${employeeObject.salary}</td>
+        <td>${currencyConvertedSalary}</td>
         <td><button>X</button></td>
     </tr>
     `);
   }
+  let currencyConvertedMonthlyTotal = currencyConverter(totalMonthlySalaries);
   $('#js-total-salaries').text(`
     Total Monthly Salaries:
-    ${totalMonthlySalaries}
+    ${currencyConvertedMonthlyTotal}
   `);
 }
+
+function currencyConverter(number) {
+  const formatter = Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 0,
+  });
+
+  number = formatter.format(number);
+  return number;
+}
+
 // Topics Covered
 // JavaScript
 // jQue ry - Selectors, append, and event handling
