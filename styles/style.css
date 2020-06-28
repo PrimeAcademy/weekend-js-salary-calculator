@@ -46,7 +46,9 @@ body, html {
     margin-bottom: 20px;
 }
 
-.table-head-css {}
+.table-head-css {
+    padding: 10px;
+}
 
 #firstNameTHead {
     width: 150px;

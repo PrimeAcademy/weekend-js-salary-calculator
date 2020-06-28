@@ -43,8 +43,8 @@ function renderTable() {
     <tr class="js-tr-style">
         <td>${employeeObject.first}</td>
         <td>${employeeObject.last}</td>
-        <td>${employeeObject.id}</td>
         <td>${employeeObject.title}</td>
+        <td>${employeeObject.id}</td>
         <td>${currencyConvertedSalary}</td>
         <td><button id=js-delete-btn>X</button></td>
     </tr>
