@@ -40,7 +40,7 @@ function renderTable() {
     totalMonthlySalaries += parseInt(employeeObject.salary / 12);
 
     $('#js-table-body').append(`
-    <tr class="test">
+    <tr class="js-tr-style">
         <td>${employeeObject.first}</td>
         <td>${employeeObject.last}</td>
         <td>${employeeObject.id}</td>
@@ -81,9 +81,6 @@ function deleteEmployeeRecord() {
   console.log(employeeArray);
 }
 
-//   }
-
-///
 function currencyConverter(number) {
   const formatter = Intl.NumberFormat('en-US', {
     style: 'currency',
