@@ -4,9 +4,11 @@ const employeeArray = [];
 
 function init() {
   console.log('Initialized');
+  $('#js-form-employee-fields').on('submit', addEmployee);
 }
 
-function addEmployee() {
+function addEmployee(event) {
+  event.preventDefault();
   console.log('in addEmployee');
 
   const employeeObject = {
