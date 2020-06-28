@@ -6,7 +6,7 @@ function init() {
   console.log('Initialized');
   $('#js-form-employee-fields').on('submit', addEmployee);
   $('#js-form-employee-fields').on('submit', renderTable);
-  $('#js-table-body').on('click', '#js-delete-btn', deleteDomLine);
+  $('#js-table-body').on('click', '#js-delete-btn', deleteEmployeeRecord);
 }
 
 function addEmployee(event) {
@@ -64,20 +64,21 @@ function renderTable() {
   }
 }
 
-function deleteDomLine() {
-  console.log('in deleteDomLine');
-  $(this).parent().parent().remove();
-  deleteEmployeeRecord();
-}
+// function deleteDomLine() {
+//   console.log('in deleteDomLine');
+//   $(this).parent().parent().remove();
+//   deleteEmployeeRecord();
+// }
 
 function deleteEmployeeRecord() {
   console.log('in deleteEmployee Record');
   console.log(employeeArray);
   const indexedRecord = $(this).data();
-  console.log('record indexes', indexedRecord);
   employeeArray.splice(indexedRecord, 1);
   console.log(employeeArray);
-  console.log('it worked!');
+  console.log('it worked?');
+  renderTable();
+  console.log(employeeArray);
 }
 
 //   }
