@@ -12,10 +12,15 @@
 
 .field-row {
     margin-bottom: 20px;
-    border: solid 1px #000;
+    /* border: solid 1px #000; */
 }
 
 .table-margin {
     margin-top: 20px;
+    ;
+}
+
+.js-tr-style {
+    text-indent: .5rem;
     ;
 }
