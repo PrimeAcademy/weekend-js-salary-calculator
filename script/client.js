@@ -6,7 +6,7 @@ function init() {
   console.log('Initialized');
   $('#js-form-employee-fields').on('submit', addEmployee);
   $('#js-form-employee-fields').on('submit', renderTable);
-  $('#js-table-body').on('click', '.js-delete-btn', deleteEmployee);
+  $('#js-table-body').on('click', '#js-delete-btn', deleteEmployee);
 }
 
 function addEmployee(event) {
@@ -46,7 +46,7 @@ function renderTable() {
         <td>${employeeObject.id}</td>
         <td>${employeeObject.title}</td>
         <td>${currencyConvertedSalary}</td>
-        <td><button class=js-delete-btn>X</button></td>
+        <td><button id=js-delete-btn>X</button></td>
     </tr>
     `);
   }
@@ -66,8 +66,13 @@ function renderTable() {
 
 function deleteEmployee() {
   console.log('in deleteEmployee');
+  for (let i = 0; i < employeeArray.length; i++) {
+    console.log('record indexes', employeeArray[i]);
+    console.log(employeeArray);
+  }
 }
 
+///
 function currencyConverter(number) {
   const formatter = Intl.NumberFormat('en-US', {
     style: 'currency',
