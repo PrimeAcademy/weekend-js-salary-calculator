@@ -20,8 +20,26 @@ function addEmployee(event) {
   };
 
   employeeArray.push(employeeObject);
+
   $('#js-form-employee-fields')[0].reset();
+
   console.log('Employee Array', employeeArray);
+}
+
+function renderTable() {
+  console.log('in renderTable');
+  for (let employeeObject of employeeArray) {
+    $('#js-table-body').append(`
+<tr>
+    <td>${employeeObject.first}</td>
+    <td>${employeeObject.last}</td>
+    <td>${employeeObject.id}</td>
+    <td>${employeeObject.title}</td>
+    <td>${employeeObject.salary}</td>
+    <td><button>Delete Employee</button></td>
+</tr>
+`);
+  }
 }
 
 // Create an application that records employee salaries
