@@ -20,6 +20,7 @@ function addEmployee(event) {
   };
 
   employeeArray.push(employeeObject);
+  $('#js-form-employee-fields')[0].reset();
 }
 
 // Create an application that records employee salaries
