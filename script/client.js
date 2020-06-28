@@ -53,7 +53,7 @@ function renderTable() {
 }
 // Topics Covered
 // JavaScript
-// jQuery - Selectors, append, and event handling
+// jQue ry - Selectors, append, and event handling
 
 // The application should have an input form that collects:
 // employee
