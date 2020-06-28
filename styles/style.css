@@ -27,7 +27,7 @@ body, html {
 
 .js-tr-style {
     text-indent: .5rem;
-    ;
+    line-height: 8px;
 }
 
 .panel {
