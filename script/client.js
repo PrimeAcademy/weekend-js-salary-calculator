@@ -1,15 +1,23 @@
 $(document).ready(init);
 
+const employeeArray = [];
+
 function init() {
   console.log('Initialized');
 }
 
-const employeeObject = {
-    firstName = $('#js-firstNField').val(),
-    lastName = $('#js-lastNField').val(),
-    idNumber = $('#js-IdField').val(),
-    title = $('#js-titleField').val(),
-    salary = $('#js-annualSalaryField').val()
+function addEmployee() {
+  console.log('in addEmployee');
+
+  const employeeObject = {
+    first: $('#js-firstNField').val(),
+    last: $('#js-lastNField').val(),
+    id: $('#js-IdField').val(),
+    title: $('#js-titleField').val(),
+    salary: $('#js-annualSalaryField').val(),
+  };
+
+  employeeArray.push(employeeObject);
 }
 
 // Create an application that records employee salaries
