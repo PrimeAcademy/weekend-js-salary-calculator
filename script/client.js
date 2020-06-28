@@ -67,7 +67,8 @@ function renderTable() {
 function deleteEmployee() {
   console.log('in deleteEmployee');
   for (let i = 0; i < employeeArray.length; i++) {
-    console.log('record indexes', employeeArray[i]);
+    const indexedRecord = employeeArray[i];
+    console.log('record indexes', indexedRecord);
     console.log(employeeArray);
   }
 }
