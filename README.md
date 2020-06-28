@@ -4,7 +4,7 @@
 
 _Duration: 8 Hour Sprint_
 
-Salary Calculator records employee data and generates a monthly cost report.
+Salary Calculator records employee data and generates a monthly cost total.
 
 Application takes in user input data of an employee.
 
