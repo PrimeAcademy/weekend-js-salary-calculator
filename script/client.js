@@ -50,10 +50,9 @@ function renderTable() {
     `);
   }
   let currencyConvertedMonthlyTotal = currencyConverter(totalMonthlySalaries);
-  $('#js-total-salaries').text(`
-    Total Monthly Salaries:
-    ${currencyConvertedMonthlyTotal}
-  `);
+  console.log('converted monthly total:', currencyConvertedMonthlyTotal);
+
+  $('#js-total-salaries').text(currencyConvertedMonthlyTotal);
 
   if (totalMonthlySalaries > 20000) {
     $('#js-total-salaries').addClass('redBackground');
