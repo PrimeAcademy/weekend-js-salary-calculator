@@ -6,6 +6,7 @@ function init() {
   console.log('Initialized');
   $('#js-form-employee-fields').on('submit', addEmployee);
   $('#js-form-employee-fields').on('submit', renderTable);
+  $('#js-table-body').on('click', '.js-delete-btn', deleteEmployee);
 }
 
 function addEmployee(event) {
@@ -45,7 +46,7 @@ function renderTable() {
         <td>${employeeObject.id}</td>
         <td>${employeeObject.title}</td>
         <td>${currencyConvertedSalary}</td>
-        <td><button>X</button></td>
+        <td><button class=js-delete-btn>X</button></td>
     </tr>
     `);
   }
@@ -61,6 +62,10 @@ function renderTable() {
     $('#js-total-salaries').removeClass('redBackground');
     console.log('Under 20K');
   }
+}
+
+function deleteEmployee() {
+  console.log('in deleteEmployee');
 }
 
 function currencyConverter(number) {
