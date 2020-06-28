@@ -1,3 +1,11 @@
 .redBackground {
     background-color: #ff0000;
 }
+
+.h1Jumbo {
+    font-size: 75px;
+}
+
+.jumbotron {
+    padding: 20px;
+}
