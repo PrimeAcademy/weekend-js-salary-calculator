@@ -34,7 +34,7 @@ function renderTable() {
   console.log('in renderTable');
   //   let totalMonthlySalaries = 0;
   for (let employeeObject of employeeArray) {
-    totalMonthlySalaries += employeeObject.salary;
+    totalMonthlySalaries += employeeObject.salary / 12;
     $('#js-table-body').append(`
     <tr>
         <td>${employeeObject.first}</td>
