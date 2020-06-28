@@ -6,7 +6,7 @@ function init() {
   console.log('Initialized');
   $('#js-form-employee-fields').on('submit', addEmployee);
   $('#js-form-employee-fields').on('submit', renderTable);
-  $('#js-table-body').on('click', '#js-delete-btn', deleteEmployee);
+  $('#js-table-body').on('click', '#js-delete-btn', deleteDomLine);
 }
 
 function addEmployee(event) {
@@ -40,7 +40,7 @@ function renderTable() {
     totalMonthlySalaries += parseInt(employeeObject.salary / 12);
 
     $('#js-table-body').append(`
-    <tr>
+    <tr class="test">
         <td>${employeeObject.first}</td>
         <td>${employeeObject.last}</td>
         <td>${employeeObject.id}</td>
@@ -64,13 +64,23 @@ function renderTable() {
   }
 }
 
-function deleteEmployee() {
-  console.log('in deleteEmployee');
+function deleteDomLine() {
+  console.log('in deleteDomLine');
+  $(this).parent().parent().remove();
+}
+
+function deleteEmployeeRecord() {
+  console.log('in deleteEmployee Record');
   for (let i = 0; i < employeeArray.length; i++) {
     const indexedRecord = employeeArray[i];
     console.log('record indexes', indexedRecord);
     console.log(employeeArray);
-    $('#js-delete-btn').parent().parent().remove();
+    const dataData = $('#js-table-body', '.test').data(indexedRecord);
+    console.log(dataData);
+    $('#js-table-body', '.test').remove(this);
+    // $('#js-table-body').remove(this);
+
+    // $('#js-delete-btn').parent().parent().remove();
   }
 }
 
