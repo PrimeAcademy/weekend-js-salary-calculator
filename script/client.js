@@ -16,7 +16,7 @@ function addEmployee(event) {
   const employeeObject = {
     first: $('#js-firstNField').val(),
     last: $('#js-lastNField').val(),
-    id: $('#js-IdField').val(),
+    id: parseInt($('#js-IdField').val()),
     title: $('#js-titleField').val(),
     salary: parseInt($('#js-annualSalaryField').val()),
   };
@@ -25,7 +25,7 @@ function addEmployee(event) {
   employeeArray.push(employeeObject);
   console.table(employeeArray);
 
-    $('#js-form-employee-fields')[0].reset();
+  $('#js-form-employee-fields')[0].reset();
 
   console.log('Employee Array', employeeArray);
 }
