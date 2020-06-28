@@ -24,3 +24,15 @@
     text-indent: .5rem;
     ;
 }
+
+.panel {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 75%;
+    box-sizing: border-box;
+    background-color: #f8f8ff;
+    border-radius: 3px;
+    box-shadow: 2px 4px 3px #696969;
+    margin-bottom: 40px;
+    border: solid 1px #000;
+}
