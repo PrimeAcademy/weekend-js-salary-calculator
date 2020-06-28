@@ -14,12 +14,13 @@ body, html {
     padding: 20px;
 }
 
-.field-row {
+/* .field-row {
     margin-bottom: 20px;
     /* border: solid 1px #000; */
-}
 
-.table-margin {
+/* } */
+
+*/ .table-margin {
     margin-top: 20px;
     ;
 }
@@ -32,7 +33,7 @@ body, html {
 .panel {
     margin: 0 auto;
     padding: 20px;
-    /* max-width: 75%; */
+    max-width: 75%;
     width: 700px;
     box-sizing: border-box;
     background-color: #f8f8ff;
@@ -40,4 +41,8 @@ body, html {
     box-shadow: 2px 4px 3px #696969;
     margin-bottom: 40px;
     border: solid 1px #000;
+}
+
+.css-btn {
+    margin-top: 10px;
 }
