@@ -28,6 +28,7 @@ function addEmployee(event) {
 }
 
 function renderTable() {
+  $('#js-table-body').empty();
   console.log('in renderTable');
   for (let employeeObject of employeeArray) {
     $('#js-table-body').append(`
