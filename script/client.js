@@ -54,6 +54,14 @@ function renderTable() {
     Total Monthly Salaries:
     ${currencyConvertedMonthlyTotal}
   `);
+
+  if (totalMonthlySalaries > 20000) {
+    $('#js-total-salaries').addClass('red background');
+    console.log('Over 20K');
+  } else {
+    $('#js-total-salaries').removeClass('red background');
+    console.log('Under 20K');
+  }
 }
 
 function currencyConverter(number) {
@@ -62,7 +70,6 @@ function currencyConverter(number) {
     currency: 'USD',
     minimumFractionDigits: 0,
   });
-
   number = formatter.format(number);
   return number;
 }
