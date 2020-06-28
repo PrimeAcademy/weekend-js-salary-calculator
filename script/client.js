@@ -5,6 +5,7 @@ const employeeArray = [];
 function init() {
   console.log('Initialized');
   $('#js-form-employee-fields').on('submit', addEmployee);
+  $('#js-form-employee-fields').on('submit', renderTable);
 }
 
 function addEmployee(event) {
