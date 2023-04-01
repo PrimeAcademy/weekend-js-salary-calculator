@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="jquery-3.6.4.min.js"></script>
+    <script src="script.js"></script>
+    <title>Salary Calculator</title>
+</head>
+<body>
+    <header>
+        <h1>Salary Calculator</h1>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Add Employee</h2>
+            <form>
+                <input 
+                type="text"
+                placeholder="First Name"
+                id="firt-input">
+                <input 
+                type="text"
+                placeholder="Last Name"
+                id="last-input">
+                <input 
+                type="text"
+                placeholder="ID"
+                id="id-input">
+                <input 
+                type="text"
+                placeholder="Title"
+                id="title-input">
+                <input 
+                type="text"
+                placeholder="Annual Salary"
+                id="annual-input"
+                >
+                <button class="submit-btn">Submit</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Employees</h2>        
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Annual Salary</th>
+                    </tr>
+                </thead>
+                <tbody class="table-body">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

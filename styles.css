@@ -1,0 +1,45 @@
+header {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    margin: -10px;
+    padding-top: 35px;
+    padding-bottom: 25px;
+    background-color: rgb(77, 78, 80);
+}
+main {
+    margin: 15px;
+}
+input {
+    border: 1px solid black;
+    width: 200px;
+    font-size: 16px;
+    margin-right: 20px;
+    padding-left: 20px;
+    height: 1.5em;
+}
+
+button {
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    
+}
+.submit-btn {
+    background-color: rgb(214, 214, 214);
+    width: 120px;
+    height: 1.7em;
+}
+/* Table */
+table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding-left: 10px;
+
+}
+tr:nth-child(even) {background-color: white;}
+tr:nth-child(odd) {background-color: rgb(214, 214, 214);}
