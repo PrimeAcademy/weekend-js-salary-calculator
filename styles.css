@@ -18,7 +18,7 @@ input {
     padding-left: 20px;
     height: 1.5em;
 }
-
+/* Buttons */
 button {
     border: 1px solid black;
     border-radius: 5px;
@@ -30,16 +30,23 @@ button {
     width: 120px;
     height: 1.7em;
 }
+
+.delete-btn {
+text-align: center;
+}
 /* Table */
 table {
     width: 100%;
     text-align: left;
     border-collapse: collapse;
 }
+th {
+    background-color: rgb(214, 214, 214);
+}
 th, td {
     border: 1px solid black;
     padding-left: 10px;
 
 }
-tr:nth-child(even) {background-color: white;}
-tr:nth-child(odd) {background-color: rgb(214, 214, 214);}
+tr:nth-child(odd) {background-color: white;}
+tr:nth-child(even) {background-color: rgb(214, 214, 214);}
