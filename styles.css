@@ -31,8 +31,8 @@ button {
     height: 1.7em;
 }
 
-.delete-btn {
-text-align: center;
+.delete-btn-cell {
+    text-align:center;
 }
 /* Table */
 table {
@@ -40,8 +40,12 @@ table {
     text-align: left;
     border-collapse: collapse;
 }
-th {
+th{
     background-color: rgb(214, 214, 214);
+}
+td[colspan='100%'] {
+    text-align: right;
+    padding-right: 40px;
 }
 th, td {
     border: 1px solid black;
