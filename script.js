@@ -15,7 +15,7 @@ function employeeInput (event) {
     let id = $('#id-input').val();
     let title = $('#title-input').val();
     let annualSalary = $('#annual-input').val();
-
+    let dollarAnnualSalary = generateDollarString(annualSalary)
 
     $('.table-body').append(`
         <tr>
@@ -23,7 +23,7 @@ function employeeInput (event) {
             <td>${lastName}</td>
             <td>${id}</td>
             <td>${title}</td>
-            <td>$${annualSalary}</td>
+            <td>${dollarAnnualSalary}</td>
             <td class='delete-btn-cell'>
                 <button class="delete-btn">Delete</button>
             </td>
@@ -36,7 +36,7 @@ function employeeInput (event) {
         if (Number(monthlySalary) > 20000) {
             $('#footy .footer').css('background-color', 'rgb(229, 154, 154)');
         };
-        return monthlySalary;
+        return generateDollarString(monthlySalary);
     });
     $('#firt-input').val('');
     $('#last-input').val('');
@@ -48,4 +48,12 @@ function employeeInput (event) {
 
 function deleteRow () {
     $(this).parent().parent().remove();
+}
+
+function generateDollarString(dollarAsNumber) {
+    let dollarString = new Intl.NumberFormat(
+    'en-US', 
+    { style: 'currency', currency: 'USD' }
+    ).format(dollarAsNumber);
+    return dollarString;
 }
