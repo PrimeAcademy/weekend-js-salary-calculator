@@ -1,59 +1,77 @@
 $(document).ready(onReady);
 
-function onReady () {
+function onReady() {
     $('.submit-btn').on('click', employeeInput);
     $('.table-body').on('click', '.delete-btn', deleteRow);
 
 }
 let totalSalary = 0;
-function employeeInput (event) {
-
+function employeeInput(event) {
     event.preventDefault()
-
-    let firstName = $('#firt-input').val();
-    let lastName = $('#last-input').val();
-    let id = $('#id-input').val();
-    let title = $('#title-input').val();
-    let annualSalary = $('#annual-input').val();
-    let dollarAnnualSalary = generateDollarString(annualSalary)
-
-    $('.table-body').append(`
-        <tr>
-            <td>${firstName}</td>
-            <td>${lastName}</td>
-            <td>${id}</td>
-            <td>${title}</td>
-            <td>${dollarAnnualSalary}</td>
-            <td class='delete-btn-cell'>
-                <button class="delete-btn">Delete</button>
-            </td>
-        </tr>
-    `);
-    $('#total-ann-salary').text(function(){
-        let totalSalaryNumber = Number(annualSalary);
-        totalSalary += totalSalaryNumber;
-        let monthlySalary = totalSalary / 12;
-        if (Number(monthlySalary) > 20000) {
-            $('#footy .footer').css('background-color', 'rgb(229, 154, 154)');
-        };
-        return generateDollarString(monthlySalary);
-    });
+    let employee = employeeData()
+    appendEmployees(employee)
+    monthlySalaryCalculator(employee)
+    clearInputs()
+}
+function clearInputs() {
     $('#firt-input').val('');
     $('#last-input').val('');
     $('#id-input').val('');
     $('#title-input').val('');
     $('#annual-input').val('');
-
 }
 
-function deleteRow () {
+function employeeData() {
+    let employee = {
+        firstName: $('#firt-input').val(),
+        lastName: $('#last-input').val(),
+        id: $('#id-input').val(),
+        title: $('#title-input').val(),
+        annualSalary: Number($('#annual-input').val()),
+        dollarAnnualSalary: generateDollarString(Number($('#annual-input').val()))
+    };
+    return employee;
+}
+
+function appendEmployees(employee) {
+    $('.table-body').append(`
+        <tr>
+            <td>${employee.firstName}</td>
+            <td>${employee.lastName}</td>
+            <td>${employee.id}</td>
+            <td>${employee.title}</td>
+            <td>${employee.dollarAnnualSalary}</td>
+            <td class='delete-btn-cell'>
+                <button class="delete-btn">Delete</button>
+            </td>
+        </tr>
+    `);
+}
+
+function monthlySalaryCalculator(employee) {
+    $('#total-ann-salary').text(function () {
+        let totalSalaryNumber = Number(employee.annualSalary);
+        totalSalary += totalSalaryNumber;
+        let monthlySalary = totalSalary / 12;
+        monthlyCostExceeded(monthlySalary);
+        return generateDollarString(monthlySalary);
+    });
+}
+
+function monthlyCostExceeded(monthlySalary) {
+    if (Number(monthlySalary) > 20000) {
+        $('#footy .footer').css('background-color', 'rgb(229, 154, 154)');
+    };
+}
+
+function deleteRow() {
     $(this).parent().parent().remove();
 }
 
 function generateDollarString(dollarAsNumber) {
     let dollarString = new Intl.NumberFormat(
-    'en-US', 
-    { style: 'currency', currency: 'USD' }
+        'en-US',
+        { style: 'currency', currency: 'USD' }
     ).format(dollarAsNumber);
     return dollarString;
 }
