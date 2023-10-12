@@ -1,9 +1,28 @@
-# Weekend Challenge: jQuery Salary Calculator
+# Weekend Challenge: JavaScript Salary Calculator
 Create an application that records employee salaries and adds salaries up to report monthly costs. 
 
 ## Topics Covered
-- JavaScript
-- jQuery - Selectors, append, and event handling
+JavaScript Dom Manipulation knowledge (Examples)
+  - Accessing the DOM
+    - `.document.<SOME_SELECTOR>`
+    - Selectors
+      - `.querySelector()`
+      - `.getElementById()`
+      - `.getElementsByClassName()`
+      - etc.
+  - Dom Manipulation Methods
+    - `.addEventListener()`
+    - `.prepend()`
+    - `.createElement()`
+    - `.remove()`
+    - etc.
+  - Manipulation of DOM elements w/props
+    - `.value = 'someValue'`
+    - `.innerHTML += (<html>) `
+    - `.textContent = 'someValue'`
+    - etc.
+
+👉🏽 Use the official documentation for manipulating the DOM with JavaScript as a resource: [https://developer.mozilla.org/en-US/docs/Web/API/Document](https://developer.mozilla.org/en-US/docs/Web/API/Document)
 
 ## Assignment
 
@@ -14,7 +33,7 @@ A 'Submit' button should collect the form information, store the information to 
 Create a delete button that removes an employee from the DOM. For Base mode, it does **not** need to remove that Employee's salary from the reported total.
 
 ### Files Provided
-No files have been provided (just instructions.md and a readme.md). Instead of forking and cloning this repo, please choose "Use This Template" (green button) and name your new repo "weekend-jquery-salary-calculator" and clone down from there. Make sure to commit regularily!
+No files have been provided (just instructions.md and a readme.md). Instead of forking and cloning this repo, please choose "Use This Template" (green button) and name your new repo "weekend-javascript-salary-calculator" and clone down from there. Make sure to commit regularily!
 
 ### Wireframe
 
@@ -24,7 +43,9 @@ No files have been provided (just instructions.md and a readme.md). Instead of f
 
 Add styling or extra functionality that fits with the theme of this assignment.
 
-Once the employee is deleted, update the _Total Monthly Cost_ section on the page to reflect the employee's removal. _HINT:_ You will need to figure out which employee was removed, in order to subtract their salary from the total. Consider using `.text()` as a getter, or look into jQuery's `.data()` function. This is tricky! 
+Once the employee is deleted, update the _Total Monthly Cost_ section on the page to reflect the employee's removal. _HINT:_ You will need to figure out which employee was removed, in order to subtract their salary from the total. Consider using `.textContent` as a getter, or look into JavaScript's `.dataset` function. This is tricky! 
+
+👉🏽 Use the official documentation for manipulating the DOM with JavaScript as a resource: [https://developer.mozilla.org/en-US/docs/Web/API/Document](https://developer.mozilla.org/en-US/docs/Web/API/Document)
 
 ## Reminder About Modes
 
